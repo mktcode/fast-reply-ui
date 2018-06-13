@@ -1,0 +1,132 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav-link {
+    position: relative;
+}
+
+.badge-overlap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: .7rem;
+    padding: 3px 6px;
+}
+
+.main-menuitem:after {
+    display: none;
+}
+
+/* CONTENT */
+
+#content {
+    width: 200%;
+    height: 100%;
+    background: #eee;
+    padding-top: 56px;
+    transition: margin-left .3s ease;
+}
+
+#content.show-left {
+    margin-left: 0;
+}
+
+#content.show-right {
+    margin-left: -100%;
+}
+
+#list,
+#reply {
+    width: 50%;
+    float: left;
+}
+
+#list {
+    background: #ccc;
+}
+
+#reply {
+    background: #ddd;
+}
+
+#list .list-group-item {
+    padding: 0;
+}
+
+#list .reply {
+    position: relative;
+}
+
+#list .reply:focus {
+    box-shadow: none;
+}
+
+#list .user {
+    line-height: 16px;
+}
+
+#list .user .profile-link {
+    text-decoration: none;
+}
+
+#list .comment-profile-image {
+    width: 36px;
+    height: 36px;
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+}
+
+#list .comment-footer .external-links {
+    line-height: 38px;
+}
+
+@media (min-width: 768px) {
+    #content {
+        width: 100%;
+    }
+
+    #content.show-right {
+        margin-left: 0;
+    }
+
+    #list {
+        width: 50%;
+    }
+
+    #reply {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    #list {
+        width: 40%;
+    }
+
+    #reply {
+        width: 60%;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-item.dropdown {
+        position: static;
+    }
+
+    .nav-item .dropdown-menu {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+}

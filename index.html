@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!-- Custom -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Hello, world!</title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand navbar-light bg-light" id="navbar">
+  <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="align-top" /></a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="tooltip" title="12 unanswered comments">
+          <i class="fas fa-inbox"></i>
+          <span class="badge badge-primary badge-pill badge-overlap">12</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="set-order" href="#" data-toggle="tooltip" title="Order: oldest to newest">
+          <i class="fas fa-sort-amount-up"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle filter-menuitem" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter articles">
+          <i class="fas fa-filter"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><span class="badge badge-primary badge-pill">12</span> All Articles</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> Microsoft acquires Github.</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> Microsoft's Just Acquired Github - The Future of</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> The Magic Frog: Sponsors in HoF and Preparation</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> Nooooooooooooooooooo! Why??? It hurts my soul!</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">2</span> How To Fix The Toilette Flush</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> Celebrating 250 days of Utopian.io & Rejecting</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> The Magic Frog: API and Refactoring (Development</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">2</span> Task Request : Fast-Reply needs a responsive</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> LAUNCHING AIR CLINIC WEBSITE Version 2.0!</a>
+          <a class="dropdown-item text-truncate" href="#"><span class="badge badge-primary badge-pill">1</span> The Magic Frog: Wallet Integration And More</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item navbar-text mr-3 d-none d-sm-inline">
+        <small>Hello mkt!</small>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle main-menuitem" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
+          <a class="dropdown-item" href="#">
+            <svg style="width: 16px; height: 16px; margin-top: 3px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" version="1.1">
+              <path class="logo__steemit" d="M32.7004951,11.3807248 C31.1310771,9.81140963 29.3043776,8.66313021 27.3619013,7.92312792 C28.4939405,4.59311764 32.5075339,3.38104493 32.5075339,3.38104493 C32.5075339,3.38104493 23.1424826,-1.48000457 12.7997611,0.459311764 C9.35218721,1.00793415 6.0461183,3.12587173 3.62767097,5.92001831 C-1.62087426,11.9803819 -0.926213868,21.1028239 5.18422484,26.3083572 C6.1233028,27.1121528 8.22014805,28.3625014 8.2587403,28.4262947 C6.8822836,31.9221676 2.48276772,32.8790671 2.48276772,32.8790671 C2.48276772,32.8790671 8.29733255,36.5152853 16.10583,37.4594261 C18.1769471,37.7145993 20.3767051,37.7783926 22.6536475,37.5359781 C26.2684544,37.2425289 29.8703972,35.3287299 32.6104465,32.6366526 C38.5407881,26.7931863 38.5922444,17.2752258 32.7004951,11.3807248 Z M30.0247661,30.3145765 C27.8121441,32.4835487 24.5060752,33.861484 21.9589871,34.0528639 C20.1580157,34.2314851 18.2284034,34.2570024 16.3759757,34.0273465 C13.6487905,33.6956214 11.680586,32.9428604 9.75097374,32.2156168 C10.7286439,31.271476 11.7063141,29.9700926 12.1051006,28.8473305 C12.3623823,28.1838802 12.3366541,27.4438779 12.0279162,26.7931863 C9.95679906,22.5317938 10.8572848,17.4283297 14.2662664,14.1110781 C16.73617,11.6996913 20.1322875,10.5641706 23.5798614,10.9852064 C26.1140854,11.2914142 28.416756,12.4014176 30.2177274,14.2003887 C34.5915151,18.5893678 34.4371461,26.014908 30.0247661,30.3145765 Z"/>
+            </svg>
+            Steemit Profile
+          </a>
+          <a class="dropdown-item" href="#">
+            <img src="assets/img/busy-logo.png" />
+            Busy Profile
+          </a>
+          <a class="dropdown-item" href="#">
+            <img src="assets/img/steemconnect-logo.png" />
+            SteemConnect Dashboard
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><i class="fas fa-at"></i> Mentions</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><i class="fas fa-inbox"></i> Reload Inbox</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-users"></i> Reload Accounts</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-eraser"></i> Clear Ignore List</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><i class="fas fa-user-friends"></i> Change User</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-hand-holding-usd"></i> Donate</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar fixed-bottom navbar-expand navbar-light bg-light" id="navbar-bottom">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="tooltip" title="pending comments">
+          <i class="fas fa-comment"></i>
+          <span class="badge badge-primary badge-pill badge-overlap">1</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="tooltip" title="pending votes">
+          <i class="fas fa-chevron-up"></i>
+          <span class="badge badge-primary badge-pill badge-overlap">3</span>
+        </a>
+      </li>
+      <li class="nav-item navbar-text px-3" data-toggle="tooltip" title="Voting power">
+        <i class="fas fa-bolt"></i>
+        <small>94.56 %</small>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" id="play-pause-broadcast" href="#" data-toggle="tooltip" title="pause broadcasting">
+          <i class="fas fa-pause"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="content" class="show-left">
+  <div id="list">
+    <div class="list-group list-group-flush">
+
+      <div class="list-group-item">
+        <div class="comment-header clearfix">
+          <div class="float-left user">
+            <div class="comment-profile-image" style="background-image: url('https://steemitimages.com/u/utopian-io/avatar/small');"></div>
+            <div class="mt-1 float-left">
+              <a href="https://steemit.com/@utopian-io" class="profile-link" target="_blank">
+                @prettylongusername
+                <span class="badge badge-secondary">69</span><br>
+              </a>
+              <small class="text-muted">6/12/2018</small>
+            </div>
+          </div>
+          <button class="btn btn-primary float-right rounded-0 reply" data-toggle="tooltip" title="Reply">
+            <i class="fas fa-reply fa-flip-horizontal"></i>
+          </button>
+        </div>
+        <small class="comment-title d-block px-2 pt-2 pb-0 mb-0 font-weight-bold">
+          Re: The Magic Frog: Wallet Integration And More (Development Update)
+        </small>
+        <small class="px-2 pb-2 pt-0 mb-0 d-block">
+          Hey @mkt Thanks for contributing on Utopian. We’re already looking forward to your next...
+        </small>
+        <div class="comment-footer">
+          <small class="p-1 pl-2 external-links">
+            <i class="fas fa-external-link-alt text-muted"></i>
+            <a href="https://steemit.com" target="_blank" class="text-muted">steemit.com</a>
+            -
+            <a href="https://busy.org" target="_blank" class="text-muted">busy.org</a>
+          </small>
+          <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 upvote" data-toggle="tooltip" title="Upvote comment">
+            <i class="fas fa-thumbs-up"></i>
+          </button>
+          <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 ignore" data-toggle="tooltip" title="Ignore this comment">
+            <i class="fas fa-ban"></i>
+          </button>
+          <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 mute" data-toggle="tooltip" title="Mute this user">
+            <i class="fas fa-microphone-slash"></i>
+          </button>
+          <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 mute" data-toggle="tooltip" title="Follow @username">
+            <i class="fas fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="reply">
+    <h1>Reply to comment</h1>
+    <a href="#" class="d-block d-md-none back">< back</a>
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip({trigger : 'hover'})
+  });
+
+  $('#set-order').click(function() {
+    $(this).find('i').toggleClass('fa-sort-amount-up fa-sort-amount-down');
+  });
+
+  $('#play-pause-broadcast').click(function() {
+    $(this).find('i').toggleClass('fa-play fa-pause');
+  });
+
+  $('.filter-menuitem').tooltip({trigger : 'hover'});
+
+  $('.reply, .back').click(function() {
+    $('#content').toggleClass('show-left show-right');
+  });
+</script>
+</body>
+</html>
