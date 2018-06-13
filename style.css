@@ -31,7 +31,7 @@ body {
     width: 200%;
     height: 100%;
     background: #eee;
-    padding-top: 56px;
+    padding: 56px 0;
     transition: margin-left .3s ease;
 }
 
@@ -46,8 +46,9 @@ body {
 #list,
 #reply {
     width: 50%;
+    height: 100%;
     float: left;
-    background: #fff;
+    overflow-y: auto;
 }
 
 #list .list-group-item {
@@ -85,6 +86,7 @@ body {
 
 #reply {
     border-left: solid 1px #eee;
+    background: #fff;
 }
 
 #reply .user {
@@ -102,6 +104,29 @@ body {
     background-size: cover;
     float: left;
     margin-right: 5px;
+}
+
+#reply .vote-weight {
+    position: relative;
+}
+
+#reply .vote-weight input {
+    width: 80px;
+    font-size: 1.2rem;
+}
+
+#reply .vote-weight:after {
+    content: '%';
+    line-height: 42px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #999;
+}
+
+#reply .vote-controls {
+    margin-top: 5px;
+    padding: 4px 8px;
 }
 
 @media (min-width: 768px) {
@@ -133,6 +158,10 @@ body {
 }
 
 @media (max-width: 575px) {
+    .tooltip {
+        display: none;
+    }
+
     .nav-item.dropdown {
         position: static;
     }
