@@ -16,24 +16,24 @@
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-expand navbar-light bg-light" id="navbar">
+<nav class="navbar fixed-top navbar-expand navbar-light bg-white border-bottom" id="navbar">
   <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="align-top" /></a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="tooltip" title="12 unanswered comments">
+        <a class="nav-link px-3" href="#" data-toggle="tooltip" title="12 unanswered comments">
           <i class="fas fa-inbox"></i>
           <span class="badge badge-primary badge-pill badge-overlap">12</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="set-order" href="#" data-toggle="tooltip" title="Order: oldest to newest">
+        <a class="nav-link px-3" id="set-order" href="#" data-toggle="tooltip" title="Order: oldest to newest">
           <i class="fas fa-sort-amount-up"></i>
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle filter-menuitem" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter articles">
+        <a class="nav-link px-3 dropdown-toggle filter-menuitem" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter articles">
           <i class="fas fa-filter"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -171,10 +171,83 @@
 
     </div>
   </div>
+
   <div id="reply">
-    <h1>Reply to comment</h1>
-    <a href="#" class="d-block d-md-none back">< back</a>
+    <div class="comment-header clearfix">
+      <div class="float-left user">
+        <button class="btn btn-link float-left rounded-0 back d-block d-md-none" data-toggle="tooltip" title="Back">
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <div class="comment-profile-image" style="background-image: url('https://steemitimages.com/u/utopian-io/avatar/small');"></div>
+        <div class="mt-1 float-left">
+          <a href="https://steemit.com/@utopian-io" class="profile-link" target="_blank">
+            @prettylongusername
+            <span class="badge badge-secondary">69</span><br>
+          </a>
+          <small class="text-muted">6/12/2018 20:24</small>
+        </div>
+      </div>
+      <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 ignore" data-toggle="tooltip" title="Ignore this comment">
+        <i class="fas fa-ban"></i>
+      </button>
+      <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 mute" data-toggle="tooltip" title="Mute this user">
+        <i class="fas fa-microphone-slash"></i>
+      </button>
+      <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 mute" data-toggle="tooltip" title="Follow @username">
+        <i class="fas fa-user-plus"></i>
+      </button>
+    </div>
+    <h5 class="px-3 pt-3 pb-0">Re: The Magic Frog: Wallet Integration And More (Development Update)</h5>
+    <p class="px-3 pb-3 pt-2">
+      Hey @mkt<br>
+      <b>Thanks for contributing on Utopian.</b><br>
+      We’re already looking forward to your next contribution!<br>
+      <br>
+      <b>Contributing on Utopian</b><br>
+      Learn how to contribute on our website or by watching this tutorial on Youtube.<br>
+      <br>
+      <b>Want to chat? Join us on Discord <a href="#">https://discord.gg/h52nFrV</a></b>.<br>
+      <br>
+      <a href="#">Vote for Utopian Witness!</a>
+    </p>
+    <small class="p-3">
+      <i class="fas fa-external-link-alt text-muted"></i>
+      <a href="https://steemit.com" target="_blank" class="text-muted">steemit.com</a>
+      -
+      <a href="https://busy.org" target="_blank" class="text-muted">busy.org</a>
+    </small>
+    <hr>
+    <h4 class="p-3">Reply</h4>
+    <form class="p-3">
+      <div class="form-group">
+        <label for="comment-input">Your Fast Reply:</label>
+        <textarea class="form-control" id="comment-input">@username </textarea>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <h5 class="p-3">Vote</h5>
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">1 %</a></li>
+        <li class="page-item"><a class="page-link" href="#">10 %</a></li>
+        <li class="page-item"><a class="page-link" href="#">25 %</a></li>
+        <li class="page-item"><a class="page-link" href="#">50 %</a></li>
+        <li class="page-item"><a class="page-link" href="#">75 %</a></li>
+        <li class="page-item"><a class="page-link" href="#">100 %</a></li>
+      </ul>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Reply
+      </button>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Reply & Vote <i class="fas fa-thumbs-up"></i>
+      </button>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-thumbs-up"></i> Vote
+      </button>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-ban"></i> Ignore
+      </button>
+    </form>
   </div>
+
 </div>
 
 <!-- Optional JavaScript -->

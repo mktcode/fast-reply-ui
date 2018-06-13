@@ -47,14 +47,7 @@ body {
 #reply {
     width: 50%;
     float: left;
-}
-
-#list {
-    background: #ccc;
-}
-
-#reply {
-    background: #ddd;
+    background: #fff;
 }
 
 #list .list-group-item {
@@ -78,8 +71,8 @@ body {
 }
 
 #list .comment-profile-image {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     background-position: center center;
     background-size: cover;
     float: left;
@@ -88,6 +81,27 @@ body {
 
 #list .comment-footer .external-links {
     line-height: 38px;
+}
+
+#reply {
+    border-left: solid 1px #eee;
+}
+
+#reply .user {
+    line-height: 16px;
+}
+
+#reply .user .profile-link {
+    text-decoration: none;
+}
+
+#reply .comment-profile-image {
+    width: 38px;
+    height: 38px;
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
 }
 
 @media (min-width: 768px) {
