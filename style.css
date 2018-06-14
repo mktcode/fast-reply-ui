@@ -16,7 +16,10 @@ a,
 
 a:hover,
 .btn-link:hover,
-.page-link:hover {
+.page-link:hover,
+a:focus,
+.btn-link:focus,
+.page-link:focus {
     color: #138496;
     text-decoration: none;
 }
@@ -28,6 +31,29 @@ a:hover,
 .page-item:first-child .page-link,
 .page-item:last-child .page-link {
     border-radius: 0;
+}
+
+.modal-title {
+    font-size: 1rem;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-body .profile-image {
+    width: 56px;
+    height: 56px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.modal-body .user {
+    line-height: 16px;
+}
+
+.modal-body .user .profile-link {
+    text-decoration: none;
 }
 
 /* NAVBAR */
@@ -132,16 +158,16 @@ a:hover,
     margin-right: 5px;
 }
 
-#reply .vote-weight {
+.vote-weight {
     position: relative;
 }
 
-#reply .vote-weight input {
+.vote-weight input {
     width: 80px;
     font-size: 1.2rem;
 }
 
-#reply .vote-weight:after {
+.vote-weight:after {
     content: '%';
     line-height: 42px;
     position: absolute;
@@ -150,7 +176,7 @@ a:hover,
     color: #999;
 }
 
-#reply .vote-controls {
+.vote-controls {
     margin-top: 5px;
     padding: 4px 8px;
 }
