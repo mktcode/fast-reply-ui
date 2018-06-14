@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link px-3" href="#" data-toggle="tooltip" title="12 unanswered comments">
+        <a class="nav-link px-3 back" href="#" data-toggle="tooltip" title="12 unanswered comments">
           <i class="fas fa-inbox"></i>
           <span class="badge badge-info badge-pill badge-overlap">12</span>
         </a>
@@ -155,7 +155,7 @@
             <a href="https://busy.org" target="_blank" class="text-muted">busy.org</a>
           </small>
           <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 upvote" data-toggle="tooltip" title="Upvote comment with 10 %">
-            <i class="fas fa-thumbs-up"></i>
+            <i class="fas fa-thumbs-up"></i> 6
           </button>
           <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 ignore" data-toggle="tooltip" title="Ignore this comment">
             <i class="fas fa-ban"></i>
@@ -217,10 +217,11 @@
       <a href="https://steemit.com" target="_blank" class="text-muted">steemit.com</a>
       -
       <a href="https://busy.org" target="_blank" class="text-muted">busy.org</a>
+      <span class="text-muted float-right mr-3">6 votes, $3.68</span>
     </small>
-    <hr>
-    <div class="text-center">
-      <h5>Vote</h5>
+    <hr class="mb-0">
+    <div class="text-center vote-form pb-4">
+      <h5 class="pt-3">Vote</h5>
       <small class="text-muted">Adjust the weight of your vote.</small>
       <ul class="pagination justify-content-center">
         <li class="page-item"><a class="page-link vote-controls" href="#"><i class="far fa-flag text-danger"></i></a></li>
@@ -238,40 +239,51 @@
         <i class="fas fa-thumbs-up"></i> Upvote
       </button>
     </div>
-    <hr>
-    <h5 class="text-center">Reply</h5>
-    <form class="p-3">
-      <div class="form-group">
-        <div class="btn-group mb-2">
-          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-bold"></i></button>
-          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-italic"></i></button>
-          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-underline"></i></button>
+    <hr class="my-0">
+    <div class="reply-form">
+      <h5 class="text-center py-3">Reply</h5>
+      <form class="pb-5">
+        <div class="form-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary mb-2 ml-3"><i class="far fa-eye"></i></button>
+          <div class="btn-group mb-2 ml-3">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-bold"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-italic"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-underline"></i></button>
+          </div>
+          <div class="btn-group mb-2 ml-3">
+            <button type="button" class="btn btn-sm btn-outline-secondary">👍</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">😀</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">😘</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">️😍</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">😆</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">😎</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">😅</button>
+          </div>
+          <textarea class="form-control border-left-0 border-right-0" rows="3" id="comment-input">@username </textarea>
+          <small class="form-text text-muted ml-3">
+            <input type="file" class="d-none" id="customFile">
+            <label for="customFile">
+              <i class="far fa-image"></i>
+              <span class="text-info" style="cursor: pointer;">Select image</span>
+            </label>
+            or paste it from the clipboard.
+          </small>
         </div>
-        <div class="btn-group mb-2 float-sm-right">
-          <button type="button" class="btn btn-outline-secondary">👍</button>
-          <button type="button" class="btn btn-outline-secondary">😀</button>
-          <button type="button" class="btn btn-outline-secondary">😘</button>
-          <button type="button" class="btn btn-outline-secondary">️😍</button>
-          <button type="button" class="btn btn-outline-secondary">😆</button>
-          <button type="button" class="btn btn-outline-secondary">😎</button>
-          <button type="button" class="btn btn-outline-secondary">😅</button>
+        <div class="text-center">
+          <button type="submit" class="btn btn-info mb-2">
+            <i class="fas fa-paper-plane"></i> Reply
+          </button>
+          <button type="submit" class="btn btn-info mb-2">
+            <i class="fas fa-paper-plane"></i> Reply and open next comment
+          </button>
         </div>
-        <textarea class="form-control" rows="4" id="comment-input">@username </textarea>
-        <small class="form-text text-muted">
-          <input type="file" class="d-none" id="customFile">
-          <label for="customFile">
-            <i class="far fa-image"></i>
-            <span class="text-info" style="cursor: pointer;">Select image</span>
-          </label>
-          or paste it from the clipboard.
-        </small>
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-info">
-          <i class="fas fa-paper-plane"></i> Reply
-        </button>
-      </div>
-    </form>
+        <div class="text-center">
+          <button class="ml-3 mt-3 px-1 py-0 btn btn-sm btn-outline-info back d-inline d-md-none" data-toggle="tooltip" title="Back">
+            <i class="fas fa-angle-left"></i> back
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 
 </div>

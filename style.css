@@ -18,6 +18,7 @@ a:hover,
 .btn-link:hover,
 .page-link:hover {
     color: #138496;
+    text-decoration: none;
 }
 
 .btn,
@@ -152,6 +153,11 @@ a:hover,
 #reply .vote-controls {
     margin-top: 5px;
     padding: 4px 8px;
+}
+
+#reply .reply-form,
+#reply .vote-form {
+    background: #fafafa;
 }
 
 @media (min-width: 768px) {
