@@ -20,6 +20,13 @@ a:hover,
     color: #138496;
 }
 
+.btn,
+.btn-sm,
+.btn-lg,
+.form-control {
+    border-radius: 0;
+}
+
 /* NAVBAR */
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
