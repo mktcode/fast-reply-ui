@@ -369,16 +369,21 @@
     <h5 class="text-center">Reply</h5>
     <form class="p-3">
       <div class="form-group">
-        <ul class="pagination justify-content-center">
-          <li class="page-item"><a class="page-link" href="#">👍</a></li>
-          <li class="page-item"><a class="page-link" href="#">😀</a></li>
-          <li class="page-item"><a class="page-link" href="#">😘</a></li>
-          <li class="page-item"><a class="page-link" href="#">️😍</a></li>
-          <li class="page-item"><a class="page-link" href="#">😆</a></li>
-          <li class="page-item"><a class="page-link" href="#">😎</a></li>
-          <li class="page-item"><a class="page-link" href="#">😅</a></li>
-        </ul>
-        <textarea class="form-control" id="comment-input">@username </textarea>
+        <div class="btn-group mb-2">
+          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-bold"></i></button>
+          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-italic"></i></button>
+          <button type="button" class="btn btn-outline-secondary"><i class="fas fa-underline"></i></button>
+        </div>
+        <div class="btn-group mb-2 float-right">
+          <button type="button" class="btn btn-outline-secondary">👍</button>
+          <button type="button" class="btn btn-outline-secondary">😀</button>
+          <button type="button" class="btn btn-outline-secondary">😘</button>
+          <button type="button" class="btn btn-outline-secondary">️😍</button>
+          <button type="button" class="btn btn-outline-secondary">😆</button>
+          <button type="button" class="btn btn-outline-secondary">😎</button>
+          <button type="button" class="btn btn-outline-secondary">😅</button>
+        </div>
+        <textarea class="form-control" rows="4" id="comment-input">@username </textarea>
         <small class="form-text text-muted">
           <input type="file" class="d-none" id="customFile">
           <label for="customFile">
