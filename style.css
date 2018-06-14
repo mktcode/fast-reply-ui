@@ -85,7 +85,6 @@ body {
 }
 
 #reply {
-    border-left: solid 1px #eee;
     background: #fff;
 }
 
@@ -147,6 +146,12 @@ body {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+    #reply {
+        border-left: solid 1px #eee;
+    }
+}
+
 @media (min-width: 992px) {
     #list {
         width: 40%;
@@ -154,6 +159,17 @@ body {
 
     #reply {
         width: 60%;
+    }
+}
+
+@media (min-width: 1199px) {
+    #list .list-group-item {
+        margin: 10px 10px 0;
+        border: none;
+    }
+
+    #list .list-group-item:last-child {
+        margin-bottom: 10px;
     }
 }
 
