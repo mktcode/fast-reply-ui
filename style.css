@@ -8,9 +8,24 @@ body {
     overflow-x: hidden;
 }
 
+a,
+.btn-link {
+    color: #17a2b8;
+}
+
+a:hover,
+.btn-link:hover {
+    color: #138496;
+}
+
 /* NAVBAR */
-.nav-link {
+.navbar-dark .navbar-nav .nav-link {
     position: relative;
+    color: rgba(255, 255, 255, .9);
+}
+
+.navbar-dark .navbar-text {
+    color: rgba(255, 255, 255, .9);
 }
 
 .badge-overlap {
