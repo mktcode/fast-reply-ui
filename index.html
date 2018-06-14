@@ -88,6 +88,9 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#"><i class="fas fa-user-friends"></i> Change User</a>
           <a class="dropdown-item" href="#"><i class="fas fa-hand-holding-usd"></i> Donate</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#settings-modal"><i class="fas fa-cog"></i> Settings</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Logout</a>
         </div>
       </li>
@@ -575,6 +578,55 @@
           <p class="font-italic text-muted m-0"><small>Hey @mkt Thanks for contributing on Utopian. We’re already looking forward to your next...</small></p>
           <p class="font-italic"><small>Voting Power: 100 %</small></p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="vote-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group row">
+            <label for="settings-votingpower" class="col-sm-6 col-form-label">Default Voting Power:</label>
+            <div class="col-sm-6">
+              <div class="input-group mb-2">
+                <input type="number" min="-100" max="100" class="form-control" id="settings-votingpower" value="100">
+                <div class="input-group-append">
+                  <div class="input-group-text">%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="settings-votingpower" class="col-sm-6 col-form-label">Broadcast Interval:</label>
+            <div class="col-sm-6">
+              <div class="input-group mb-2">
+                <input type="number" min="5" class="form-control" id="settings-broadcast-interval" value="5">
+                <div class="input-group-append">
+                  <div class="input-group-text">sec.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-info">
+          <i class="fas fa-check"></i> Save
+        </button>
       </div>
     </div>
   </div>
