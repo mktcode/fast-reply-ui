@@ -188,6 +188,10 @@ a:hover,
     #list .list-group-item:last-child {
         margin-bottom: 10px;
     }
+
+    #reply .user {
+        padding: 10px 1rem;
+    }
 }
 
 @media (max-width: 575px) {
