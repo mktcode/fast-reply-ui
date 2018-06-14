@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,14 +11,15 @@
   <!-- Custom -->
   <link rel="stylesheet" href="style.css">
 
-  <title>Hello, world!</title>
+  <title>Fast Reply</title>
 </head>
 <body>
 
+<!-- Top Nav -->
 <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark" id="navbar">
   <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="align-top" /></a>
-
   <div class="collapse navbar-collapse">
+    <!-- Left -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link px-3 back" href="#" data-toggle="tooltip" title="12 unanswered comments">
@@ -32,6 +32,7 @@
           <i class="fas fa-sort-amount-up"></i>
         </a>
       </li>
+      <!-- Article Filter -->
       <li class="nav-item dropdown">
         <a class="nav-link px-3 dropdown-toggle filter-menuitem" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter articles">
           <i class="fas fa-filter"></i>
@@ -52,10 +53,13 @@
         </div>
       </li>
     </ul>
+
+    <!-- Right -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item navbar-text mr-3 d-none d-sm-inline">
         <small>Hello mkt!</small>
       </li>
+      <!-- Hamburger Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle main-menuitem" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-bars"></i>
@@ -91,8 +95,10 @@
   </div>
 </nav>
 
+<!-- Bottom Nav -->
 <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark" id="navbar-bottom">
   <div class="collapse navbar-collapse">
+    <!-- Left -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="tooltip" title="pending comments">
@@ -111,6 +117,8 @@
         <small>94.56 %</small>
       </li>
     </ul>
+
+    <!-- Right -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" id="play-pause-broadcast" href="#" data-toggle="tooltip" title="pause broadcasting">
@@ -121,12 +129,15 @@
   </div>
 </nav>
 
+<!-- Content -->
 <div id="content" class="show-left">
+  <!-- Comments List -->
   <div id="list">
     <div class="list-group list-group-flush">
 
       <div class="list-group-item">
         <div class="comment-header clearfix">
+          <!-- User -->
           <div class="float-left user">
             <div class="comment-profile-image" style="background-image: url('https://steemitimages.com/u/utopian-io/avatar/small');"></div>
             <div class="mt-1 float-left">
@@ -137,16 +148,19 @@
               <small class="text-muted">6/12/2018 20:24</small>
             </div>
           </div>
+          <!-- Reply Button -->
           <button class="btn btn-info float-right rounded-0 reply" data-toggle="tooltip" title="Reply">
             <i class="fas fa-reply fa-flip-horizontal"></i>
           </button>
         </div>
+        <!-- Title/Preview -->
         <small class="comment-title d-block px-2 pt-2 pb-0 mb-0 font-weight-bold">
           Re: The Magic Frog: Wallet Integration And More (Development Update)
         </small>
         <small class="px-2 pb-2 pt-0 mb-0 d-block">
           Hey @mkt Thanks for contributing on Utopian. We’re already looking forward to your next...
         </small>
+        <!-- Comment Footer: Steemit/Busy Links, Butons -->
         <div class="comment-footer">
           <small class="p-1 pl-2 external-links">
             <i class="fas fa-external-link-alt text-muted"></i>
@@ -436,8 +450,10 @@
     </div>
   </div>
 
+  <!-- Details/Vote/Reply -->
   <div id="reply">
     <div class="comment-header clearfix">
+      <!-- User -->
       <div class="float-left user">
         <div class="comment-profile-image" style="background-image: url('https://steemitimages.com/u/utopian-io/avatar/small');"></div>
         <div class="mt-1 float-left">
@@ -448,6 +464,7 @@
           <small class="text-muted">6/12/2018 20:24</small>
         </div>
       </div>
+      <!-- Follow/Mute/Ignore Buttons -->
       <button class="btn btn-link float-right rounded-0 px-2 px-sm-3 ignore" data-toggle="tooltip" title="Ignore this comment">
         <i class="fas fa-ban"></i>
       </button>
@@ -458,11 +475,13 @@
         <i class="fas fa-user-plus"></i>
       </button>
     </div>
+    <!-- Back Button -->
     <div class="text-center">
       <button class="ml-3 mt-3 px-1 py-0 btn btn-sm btn-outline-info back d-inline d-md-none" data-toggle="tooltip" title="Back">
         <i class="fas fa-angle-left"></i> back
       </button>
     </div>
+    <!-- Comment -->
     <h5 class="px-3 pt-3 pb-0">Re: The Magic Frog: Wallet Integration And More (Development Update)</h5>
     <p class="px-3 pb-3 pt-2">
       Hey @mkt<br>
@@ -476,6 +495,7 @@
       <br>
       <a href="#">Vote for Utopian Witness!</a>
     </p>
+    <!-- Steemit/Busy Links, Votes/Reward-->
     <small class="p-3">
       <i class="fas fa-external-link-alt text-muted"></i>
       <a href="https://steemit.com" target="_blank" class="text-muted">steemit.com</a>
@@ -484,6 +504,7 @@
       <span class="text-muted float-right mr-3">6 votes, $3.68</span>
     </small>
     <hr class="mb-0">
+    <!-- Vote Form -->
     <div class="text-center vote-form py-4">
       <small class="text-muted">Adjust the weight of your vote.</small>
       <ul class="pagination justify-content-center">
@@ -503,6 +524,7 @@
       </button>
     </div>
     <hr class="my-0">
+    <!-- Reply Form -->
     <div class="reply-form pt-2 pb-5">
       <form>
         <div class="form-group">
@@ -522,6 +544,7 @@
             <button type="button" class="btn btn-sm btn-outline-secondary">😅</button>
           </div>
           <textarea class="form-control border-left-0 border-right-0" rows="3" id="comment-input">@username </textarea>
+          <!-- Image Upload -->
           <small class="form-text text-muted ml-3">
             <input type="file" class="d-none" id="customFile">
             <label for="customFile">
@@ -531,6 +554,7 @@
             or paste it from the clipboard.
           </small>
         </div>
+        <!-- Submit Buttons -->
         <div class="text-center">
           <button type="submit" class="btn btn-info mb-2">
             <i class="fas fa-paper-plane"></i> Reply
@@ -550,27 +574,29 @@
 
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- jQuery/Popper/Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script>
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip({trigger : 'hover'});
+    // toggle show-left/-right (for mobile)
+    $('.reply, .back').click(function() {
+      $('#content').toggleClass('show-left show-right');
+    });
 
+    // enable tooltips
+    $('[data-toggle="tooltip"]').tooltip({trigger : 'hover'});
+    $('.filter-menuitem').tooltip({trigger : 'hover'});
+
+    // simulate changing comments order
     $('#set-order').click(function() {
       $(this).find('i').toggleClass('fa-sort-amount-up fa-sort-amount-down');
     });
 
+    // simulating play/pause braodcasting
     $('#play-pause-broadcast').click(function() {
       $(this).find('i').toggleClass('fa-play fa-pause');
-    });
-
-    $('.filter-menuitem').tooltip({trigger : 'hover'});
-
-    $('.reply, .back').click(function() {
-      $('#content').toggleClass('show-left show-right');
     });
   });
 </script>
