@@ -23,7 +23,9 @@ a:hover,
 .btn,
 .btn-sm,
 .btn-lg,
-.form-control {
+.form-control,
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
     border-radius: 0;
 }
 
