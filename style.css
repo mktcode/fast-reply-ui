@@ -9,12 +9,14 @@ body {
 }
 
 a,
-.btn-link {
+.btn-link,
+.page-link {
     color: #17a2b8;
 }
 
 a:hover,
-.btn-link:hover {
+.btn-link:hover,
+.page-link:hover {
     color: #138496;
 }
 
