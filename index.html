@@ -261,19 +261,19 @@
     <div class="text-center vote-form py-4">
       <small class="text-muted">Adjust the weight of your vote.</small>
       <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link vote-controls" href="#"><i class="far fa-flag text-danger"></i></a></li>
-        <li class="page-item"><a class="page-link vote-controls" href="#">-10</a></li>
-        <li class="page-item"><a class="page-link vote-controls" href="#">-1</a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-min" href="#"><i class="far fa-flag text-danger"></i></a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-m10" href="#">-10</a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-m1" href="#">-1</a></li>
         <li class="page-item vote-weight">
-          <input type="number" value="100" class="form-control" />
+          <input type="number" value="100" min="-100" max="100" class="form-control vote-input" />
         </li>
-        <li class="page-item disabled"><a class="page-link vote-controls" href="#">+1</a></li>
-        <li class="page-item disabled"><a class="page-link vote-controls" href="#">+10</a></li>
-        <li class="page-item"><a class="page-link vote-controls" href="#"><i class="far fa-thumbs-up text-success"></i></a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-p1" href="#">+1</a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-p10" href="#">+10</a></li>
+        <li class="page-item"><a class="page-link vote-controls vote-max" href="#"><i class="far fa-thumbs-up text-success"></i></a></li>
       </ul>
 
-      <button type="submit" class="btn btn-info">
-        <i class="fas fa-thumbs-up"></i> Upvote
+      <button type="submit" class="btn btn-info vote-submit">
+        <i class="fas fa-thumbs-up"></i> <span>Upvote</span>
       </button>
     </div>
     <hr class="my-0">
@@ -655,6 +655,52 @@
     // simulating play/pause braodcasting
     $('#play-pause-broadcast').click(function() {
       $(this).find('i').toggleClass('fa-play fa-pause');
+    });
+
+    // vote weight input
+    var voteInput = $('.vote-input');
+    var voteSubmit = $('.vote-submit');
+    $('.vote-min').click(function () {
+      voteInput.val(-100);
+      voteSubmit.find('i').removeClass('fa-thumbs-up').addClass('fa-thumbs-down');
+      voteSubmit.find('span').text('Downvote');
+    });
+    $('.vote-max').click(function () {
+      voteInput.val(100);
+      voteSubmit.find('i').removeClass('fa-thumbs-down').addClass('fa-thumbs-up');
+      voteSubmit.find('span').text('Upvote');
+    });
+    $('.vote-m1').click(function () {
+      var value = Math.max(parseInt(voteInput.val()) - 1, -100);
+      voteInput.val(value);
+      if (value < 0) {
+        voteSubmit.find('i').removeClass('fa-thumbs-up').addClass('fa-thumbs-down');
+        voteSubmit.find('span').text('Downvote');
+      }
+    });
+    $('.vote-m10').click(function () {
+      var value = Math.max(parseInt(voteInput.val()) - 10, -100);
+      voteInput.val(value);
+      if (value < 0) {
+        voteSubmit.find('i').removeClass('fa-thumbs-up').addClass('fa-thumbs-down');
+        voteSubmit.find('span').text('Downvote');
+      }
+    });
+    $('.vote-p1').click(function () {
+      var value = Math.min(parseInt(voteInput.val()) + 1, 100);
+      voteInput.val(value);
+      if (value >= 0) {
+        voteSubmit.find('i').removeClass('fa-thumbs-down').addClass('fa-thumbs-up');
+        voteSubmit.find('span').text('Upvote');
+      }
+    });
+    $('.vote-p10').click(function () {
+      var value = Math.min(parseInt(voteInput.val()) + 10, 100);
+      voteInput.val(value);
+      if (value >= 0) {
+        voteSubmit.find('i').removeClass('fa-thumbs-down').addClass('fa-thumbs-up');
+        voteSubmit.find('span').text('Upvote');
+      }
     });
   });
 </script>
