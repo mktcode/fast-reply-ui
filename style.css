@@ -56,6 +56,11 @@ a:focus,
     text-decoration: none;
 }
 
+.modal-body .table {
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
 /* NAVBAR */
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
